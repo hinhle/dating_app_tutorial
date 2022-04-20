@@ -21,6 +21,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+string[] origins = {"http://localhost:4200", "https://localhost:4200"};
+
+app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins(origins));
+
 app.UseAuthorization();
 
 app.MapControllers();
