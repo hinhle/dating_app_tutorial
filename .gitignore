@@ -458,3 +458,8 @@ appsettings.json
 
 #db
 *.db
+*.db-shm
+*.db-wal
+
+#Visual Studio Code
+/.vscode/*
